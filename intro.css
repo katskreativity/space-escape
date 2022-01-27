@@ -1,0 +1,256 @@
+:root{
+    --bg-color: black;
+}
+
+body {
+    margin: 0;
+    font-family: 'Astral-Mono';
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(16, 25px);
+}
+
+article{
+    color: var(--colour);
+}
+
+h1{
+    /*color: #7DE893;*/
+    position: relative;
+    width: max-content;
+}
+
+h1.one::before,
+h1.one::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+}
+
+h1.one::before{
+    top: 0;
+    background: var(--bg-color);
+    animation: typewriter 2s steps(20) 1s forwards;
+}
+
+h1.one::after{
+    top: 4;
+    width: 0.54em;
+    height: 0.2em;
+    background: #7DE893;
+    animation: 
+        typewriterCursor 2s steps(20) 1s forwards;
+}
+
+h1.two::before,
+h1.two::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+}
+
+h1.two::before{
+    top: 0;
+    background: var(--bg-color);
+    animation: typewriter 5.8s steps(58) 4s forwards;
+}
+
+h1.two::after{
+    top: 4;
+    width: 0.54em;
+    height: 0.2em;
+    background: #7DE893;
+    animation: 
+        typewriterCursor2 9.8s steps(58) 0s forwards;
+}
+
+h1.three::before,
+h1.three::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+}
+
+h1.three::before{
+    top: 0;
+    background: var(--bg-color);
+    animation: typewriter 5.6s steps(56) 10.8s forwards;
+}
+
+h1.three::after{
+    top: 4;
+    width: 0.54em;
+    height: 0.2em;
+    background: #7DE893;
+    animation: 
+        typewriterCursor3 16.4s steps(56) 0s forwards;
+}
+
+h1.four::before,
+h1.four::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    color: red;
+}
+
+h1.four::before{
+    top: 0;
+    background: var(--bg-color);
+    animation: typewriter 0.3s steps(var(--nSteps)) var(--wait) forwards;
+}
+
+h1.four::after{
+    top: 4;
+    width: 0.54em;
+    height: 0.2em;
+    background: black;
+    animation: 
+        typewriterCursor4 0.3s steps(var(--nSteps)) var(--wait) forwards;
+}
+
+h1.five::before{
+    top: 0;
+    background: var(--bg-color);
+    animation: typewriter 0.3s steps(var(--nSteps)) var(--wait) forwards;
+}
+
+h1.five::after{
+    top: 4;
+    width: 0.54em;
+    height: 0.2em;
+    background: black;
+    animation: 
+        typewriterCursor4 0.3s steps(var(--nSteps)) var(--wait) forwards;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #7DE893;
+}
+
+.button-2{
+    width: 70px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #7DE893;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: none;
+    text-decoration: none;
+}
+
+.button-2:hover{
+    cursor: pointer;
+    font-style: italic; 
+}
+
+@keyframes typewriter{
+    to { 
+        left: 100%; 
+    }
+}
+
+@keyframes typewriterCursor{
+    to {
+        left: 100%;
+    }
+    0%{
+        background: #7DE893;
+    }
+    99.999%{
+        background: #7DE893;
+    }
+    100%{
+        background: var(--bg-color);;
+    }
+}
+
+@keyframes typewriterCursor2{
+    0%{
+        left: 0%;
+        background: var(--bg-color);;
+    }
+    30.611%{
+        left: 0%;
+        background: var(--bg-color);;
+    }
+    30.612%{
+        left: 0%;
+        background: #7DE893;
+    }
+    40.8163%{
+        left: 0%;
+        background: #7DE893;
+    }
+    99.999%{
+        left: 100%;
+        background: #7DE893;
+    }
+    100%{
+        left: 100%;
+        background: var(--bg-color);;
+    }
+}
+
+@keyframes typewriterCursor3{
+    0%{
+        left: 0%;
+        background: var(--bg-color);;
+    }
+    59.7560%{
+        left: 0%;
+        background: var(--bg-color);;
+    }
+    59.7561%{
+        left: 0%;
+        background: #7DE893;
+    }
+    65.8537%{
+        left: 0%;
+        background: #7DE893;
+    }
+    99.999%{
+        left: 100%;
+        background: #7DE893;
+    }
+    100%{
+        left: 100%;
+        background: var(--bg-color);;
+    }
+}
+
+@keyframes typewriterCursor4{
+    to {
+        left: 100%;
+    }
+    0%{
+        background: red;
+    }
+    99.999%{
+        background: red;
+    }
+    100%{
+        background: var(--bg-color);;
+    }
+}
+
+@keyframes blinkk{
+    to{
+        background: transparent;
+    }
+}
+
+@font-face {
+    font-family: Astral-Mono;
+    src: url("AstralMono.ttf")  format("truetype");
+}

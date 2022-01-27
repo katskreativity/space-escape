@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Astral-Mono';
+    height: 100%;
+    display: grid;
+    background-color: black;
+    color: #7DE893;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    font-style: italic;
+}
+
+input[type=text]{
+    width: 140px;
+    border: none;
+    outline: none;
+    background: #3B3B3B;
+    color: #7DE893;
+    caret-color: #7DE893;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.button-1{
+    width: 70px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #7DE893;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: none;
+}
+
+.button-1:hover{
+    cursor: pointer;
+    font-style: italic; 
+}
+
+@font-face {
+    font-family: Astral-Mono;
+    src: url("AstralMono.ttf")  format("truetype");
+}
